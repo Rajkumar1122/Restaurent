@@ -25,7 +25,7 @@
 
 <body>
 <h1></h1>
-<form;form action="supplier.do" method="POST" modelAttribute="supplier" commandName="supplier">
+<form:form action="supplier.do" method="POST" modelAttribute="supplier" commandName="supplier">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -47,36 +47,51 @@
         <div class="well">
             <div class="row">
                 <div class="col-md-3 col-md-offset-1">
-                    <label>Supplier Id</label>
+                    <form:label path="supplierid">Supplier Id</form:label>
                 </div>
                 <div class="col-md-5">
-                    <input type="text">
+                    <form:input class="form-control input-sm" path="supplierid" type="text"/>
                 </div>
             </div>
         </div>
         <div class="well">
             <div class="row">
                 <div class="col-md-3 col-md-offset-1">
-                    <label>Supplier Name</label>
+                    <form:label path="supplierName">Supplier Name</form:label>
                 </div>
                 <div class="col-md-5">
-                    <input type="text">
+                    <form:input class="form-control" path="supplierName" type="text"/>
                 </div>
             </div>
         </div>
         <div class="well">
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-default" type="button">Add </button>
-                    <button class="btn btn-default" type="button">Delete </button>
-                    <button class="btn btn-default" type="button">Edit </button>
-                    <button class="btn btn-default" type="button">Search </button>
+                    <input type="submit" name="action" value="Add" />
+                     <input type="submit" name="action" value="Edit" />
+                      <input type="submit" name="action" value="Delete" />
+                       <input type="submit" name="action" value="Search" />
+        </form:form>
+        <br>
+        <table border="1">
+        <th>ID</th>
+        <th>Supplier name</th>
+        <c:forEach items="${supplierList }" var="supplier">
+        <tr>
+        <td>${supplier.supplierid }</td>
+        <td>${supplier.supplierName }</td>
+       </tr>
+      </c:forEach>
+      
+        
+     </table>
+                   
                 </div>
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
+    <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
 </body>
 
 </html>
