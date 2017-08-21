@@ -43,8 +43,8 @@
                     </li>
                     <li role="presentation" class="box"><a href="index">Home </a></li>
                      <sec:authorize access="!isAuthenticated()"> 
-                    <li role="presentation" class="box"><a href="login">LOGIN </a></li>
-                    <li role="presentation" class="box"><a href="register">REGISTER </a></li>
+                    <li role="presentation" class="box"><a href="login">Login </a></li>
+                    <li role="presentation" class="box"><a href="register">Register </a></li>
                     </sec:authorize>
                      <sec:authorize access="isAuthenticated()">
                     <li role="presentation" class="box"><a href="cart">Cart </a></li>
