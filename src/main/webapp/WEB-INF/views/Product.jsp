@@ -46,7 +46,7 @@
         <div class="well">
             <div class="row">
                 <div class="col-md-3 col-md-offset-1">
-                    <form:label path="productid">Product Id</form:label>
+                    <form:label path="productid">ProductId</form:label>
                 </div>
                 <div class="col-md-6">
                     <form:input class="form-control input-sm" path="productid" type="text"/>
@@ -130,9 +130,9 @@
                 <div class="col-md-4">
              <form:select class="form-control input-sm" path="supid" required="true">       
              <c:forEach items="${supplierList}" var="supplier">
-									<form:option class="form-control" value="${supplier.supplierid}">${supplier.supplierName}</form:option>
-								</c:forEach>  
-								</form:select>
+			 <form:option class="form-control" value="${supplier.supplierid}">${supplier.supplierName}</form:option>
+			   </c:forEach>  
+				</form:select>
                     </div>
             </div>
         </div>
