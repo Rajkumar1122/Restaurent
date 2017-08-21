@@ -43,6 +43,11 @@ public class HomeController {
 		map.put("Listpro", productDAO.getProductByCategory(Categoryid));
 		return "Productlist";
 	}
+	@RequestMapping("/index")
+	public String HomePage()
+	{
+		return "redirect:/";
+	}
 	
 /*	@RequestMapping(value=".../addtoCart/{Productid}/{price}", method=RequestMethod.POST)
 	public String addCart(@PathVariable("price") int price, @PathVariable("Productid") int Productid, Map<String,Object> map , Model model )

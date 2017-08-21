@@ -59,7 +59,7 @@ public class HbConfig {
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		//sessionBuilder.scanPackages("com.springproject");
+		sessionBuilder.scanPackages("com.springproject");
 		sessionBuilder.addAnnotatedClasses(Users.class);
 		sessionBuilder.addAnnotatedClasses(Category.class);
 		sessionBuilder.addAnnotatedClasses(Product.class);

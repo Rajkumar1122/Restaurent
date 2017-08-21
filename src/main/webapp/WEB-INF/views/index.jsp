@@ -34,23 +34,26 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation"><a href="/">Home </a></li>
-                        <li role="presentation"><a href="login">Login </a></li>
-                        <li role="presentation"><a href="register">Register </a></li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> Menu <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                               <c:forEach items="${categoryList}" var="category">
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           <c:forEach items="${categoryList}" var="category">
                             <li role="presentation"><a href="product${category.categoryId}">${category.categoryName}</a></li>
-                         </c:forEach>
-                            </ul>
-                        </li>
-                        <li role="presentation" class="signup">
-                            <a href="#" class="signup"> </a>
-                        </li>
-                    </ul>
-                </div>
+                            </c:forEach>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="box"><a href="index">Home </a></li>
+                     <sec:authorize access="!isAuthenticated()"> 
+                    <li role="presentation" class="box"><a href="login">LOGIN </a></li>
+                    <li role="presentation" class="box"><a href="register">REGISTER </a></li>
+                    </sec:authorize>
+                     <sec:authorize access="isAuthenticated()">
+                    <li role="presentation" class="box"><a href="cart">Cart </a></li>
+                    <li class="box"> <a href="<c:url value="j_spring_security_logout" />">Logout</a></li>
+                              </sec:authorize>
+                </ul>
             </div>
-        </nav>
+        </div>
+</nav>
     </div>
     <div class="div-2">
         <div class="carousel slide" data-ride="carousel" id="carousel-1">
