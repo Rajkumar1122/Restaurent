@@ -36,10 +36,11 @@
                     <li role="presentation"><a href="#">Supplier </a></li>
                     <li role="presentation"><a href="#">Product </a></li>
                 </ul>
-                <form:form method="POST" action="product.do" enctype="multipart/form-data" modelAttribute="product"/>
-            </div>
+                           </div>
         </div>
     </nav>
+     <form:form method="POST" action="product.do" enctype="multipart/form-data" modelAttribute="product">
+    
     <div class="page-header">
         <h1> Welcome !!<small> Enter The Product Details.</small></h1></div>
     <div class="container">
@@ -147,6 +148,7 @@
             </div>
         </div>
     </div>
+    </form:form>
     <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
 </body>
