@@ -105,7 +105,7 @@
     <footer>
         <div class="row">
             <div class="col-md-4 col-sm-6 footer-navigation">
-                <h3><a href="#">RESTAURENTE<span>logo </span></a></h3>
+                <h3><a href="#">RESTAURENTE</a></h3>
                 <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
                 <p class="company-name">Company Name © 2017 </p>
             </div>
