@@ -68,7 +68,7 @@
                     <label>
                         <input type="checkbox">I've read and accept the terms and conditions</label>
                 </div>
-                <button class="btn btn-default submit-button" type="button">Submit Form</button>
+                <button class="btn btn-default submit-button" type="submit">Submit Form</button>
             </form:form>
         </div>
     </div>

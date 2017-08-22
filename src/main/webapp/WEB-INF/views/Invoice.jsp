@@ -108,6 +108,7 @@
        <button class="btn btn-danger">Continue Shopping</button>
  </form:form>         
  
+     <script src="<c:url value="/resources/assets/js/print.js"/>"></script>
     <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
 
