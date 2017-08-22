@@ -149,6 +149,42 @@
         </div>
     </div>
     </form:form>
+     <br>
+<div class="container">
+        <div class="well">     
+		<table class ="table table-hover ">
+		<thead>
+		<tr>
+	<th>ID</th>
+	<th>Product name</th>
+	<th>Product desc</th>
+	<th>product price</th>
+	<th>product stock</th>
+	<th>image</th>
+</tr>
+</thead>	
+<tbody>	
+<c:forEach items="${productList}" var="product">
+		<tr>
+			<td>${product.productid}</td>
+			<td>${product.productName}</td>
+			<td>${product.productDescription}</td>
+			<td>${product.price}</td>
+			<td>${product.stock}</td>
+			<td><div class="thumbnail">
+			<img height="200px" width="200px" atl="${product.productid}"
+			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">
+			</div></td>
+			
+			
+		</tr>
+		</c:forEach>
+	</tbody>	
+	
+</table>
+</div>
+</div>
+    
     <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
 </body>
