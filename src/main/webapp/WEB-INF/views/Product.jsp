@@ -97,14 +97,12 @@
         </div>
         <div class="well">
             <div class="row">
-                <div class="col-md-3 col-md-offset-1">
-                     <form:label path="productid">Image</form:label>
-                </div>
-                <div class="col-md-6">
-                     <form:input class="form-control input-sm" path="Image" type="text"/>
-                </div>
-            </div>
-            <input type="file">
+                 <div class="col-md-offset-3 col-sm-2 col-xs-6">
+                        <form:label path="image" >Image </form:label>
+                    </div>
+                     <div class="col-sm-4 col-xs-6">
+                
+            <input name="file" type="file"/>
         </div>
     </div>
     <div class="container">
@@ -172,13 +170,12 @@
 			<td>${product.price}</td>
 			<td>${product.stock}</td>
 			<td><div class="thumbnail">
-			<img height="200px" width="200px" atl="${product.productid}"
-			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">
-			</div></td>
+				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/Restaurent/myImage/imageDisplay?id=${product.productid}" />
+				</div></td>
 			
 			
 		</tr>
-		</c:forEach>
+		</c:forEach>j
 	</tbody>	
 	
 </table>
