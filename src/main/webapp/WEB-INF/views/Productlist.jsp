@@ -27,8 +27,7 @@
                 <div class="col-md-4 col-md-offset-0">
                     <div>
                         <div class="row">
-                            <div class="col-md-12"><img atl="${product.productid}"
-			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">></div>
+                            <div class="col-md-12"><img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/Restaurent/myImage/imageDisplay?id=${product.productid}" /></div>
                             <div class="col-md-12">
                                 <h4>${product.productName}</h4>
                                 <p>

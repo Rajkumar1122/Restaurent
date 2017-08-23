@@ -76,33 +76,29 @@
             <p></p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail"><img src="<c:url value="/resources/assets/img/veg biryani1111.jpg"/>">
-                <div class="caption">
-                    <h3>Veg Biryani</h3>
-                    <p>An Indian Preparartion Of Rice, Select Spices And Assorted Vegetables.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail"><img src="<c:url value="/resources/assets/img/6666.jpg"/>">
-                <div class="caption">
-                    <h3>Chicken 65</h3>
-                    <p>Chicken 65 Recipe Dry , Gravy &amp; Crispy .The Flavour Of The Dish Attributed From Red Chilles.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail"><img src="<c:url value="/resources/assets/img/sura.jpg"/>">
-                <div class="caption">
-                    <h3>Sura Wine</h3>
-                    <p>Sura Wine is a Strong Distilled Alcoholic Beverge.</p>
-                </div>
-            </div>
-        </div>
+    
     </div>
-    <footer>
+    <footer>   
+     <div class="container">
+		<c:forEach items="${HomeList}" var="product">
+		<div class="col-md-4">
+				<div class="thumbnail">
+				<img width="100px" height="100px" class="img-responsive" style="padding-top: 5px" src="/Restaurent/myImage/imageDisplay?id=${product.productid}" />
+				 <div class="caption">
+                  <h4 class="pull-right">${product.price}</h4>
+                  <h4><a href=  "#">${product.productName}</a></h4>
+                  <p>${product.productDescription}.</p>
+                								<form action="addToCart/${product.productid}">
+										<input type="submit" value="Add to Cart" class="btn btn-primary" >
+
+									</form>
+						
+					</div>
+				</div>
+			</div>
+		</c:forEach>
+</div>
+    </div>
         <div class="row">
             <div class="col-md-4 col-sm-6 footer-navigation">
                 <h3><a href="#">RESTAURENTE</a></h3>
